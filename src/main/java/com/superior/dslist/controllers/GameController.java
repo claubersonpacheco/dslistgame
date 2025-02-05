@@ -34,8 +34,5 @@ public class GameController {
 		
 		return result;
 	}
-	
-	
-	
 
 }

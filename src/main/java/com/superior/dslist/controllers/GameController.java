@@ -3,6 +3,7 @@ package com.superior.dslist.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +34,14 @@ public class GameController {
 		List<GameMinDTO> result = gameService.findAll();
 		
 		return result;
+	}
+
+	@GetMapping("/home")
+	public String exibirHome(Model model){
+
+		model.addAttribute("mensagem", "Olá Mundo");
+
+		return "home";
 	}
 
 }
